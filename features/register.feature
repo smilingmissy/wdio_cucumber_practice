@@ -1,9 +1,8 @@
 Feature: User Registration
 
   Background:
-    Given I launch the browser
-    And I navigate to the register page
-    Then the register page should be displayed successfully
+   Given I navigate to the register page
+   Then the register page should be displayed successfully
 
  
   Scenario: Successful Registration 

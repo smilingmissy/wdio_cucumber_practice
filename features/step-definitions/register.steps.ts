@@ -5,10 +5,6 @@ import RegisterPage from '../pageobjects/register.page';
 
 /* ---------- Given ---------- */
 
-Given('I launch the browser', async () => {
-  await browser.maximizeWindow();
-});
-
 Given('I navigate to the register page', async () => {
   await RegisterPage.open();
 });

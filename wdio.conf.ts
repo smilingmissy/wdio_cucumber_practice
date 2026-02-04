@@ -23,7 +23,8 @@ export const config: WebdriverIO.Config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './features/**/*.feature'
+       './features/**/*.feature'
+        // './features/radio.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -130,8 +131,8 @@ reporters: ['spec'],
 // If you are using Cucumber you need to specify the location of your step definitions.
 cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
-    require: ['./features/step-definitions/login.steps.ts', './features/step-definitions/register.steps.ts'],
-
+   require: ['./features/step-definitions/login.steps.ts', './features/step-definitions/register.steps.ts' ,'./features/step-definitions/radio.steps.ts'],
+    
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
