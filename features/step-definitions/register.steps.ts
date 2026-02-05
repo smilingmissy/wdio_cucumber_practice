@@ -3,7 +3,6 @@ import { browser } from '@wdio/globals';
 import { expect } from 'expect-webdriverio';
 import RegisterPage from '../pageobjects/register.page';
 
-/* ---------- Given ---------- */
 
 Given('I navigate to the register page', async () => {
   await RegisterPage.open();
@@ -13,18 +12,17 @@ Then('the register page should be displayed successfully', async () => {
  await expect(browser).toHaveUrl(expect.stringContaining('/register'));
 });
 
-/* ---------- When ---------- */
 
 When('I enter a valid username', async () => {
-  await RegisterPage.enterUsername('madhi');
+  await RegisterPage.enterUsername('mahiwdhgtf');
 });
 
 When('I enter a valid password', async () => {
-  await RegisterPage.enterPassword('Teswe');
+  await RegisterPage.enterPassword('Teswhe');
 });
 
 When('I confirm the password correctly', async () => {
-  await RegisterPage.confirmPassword('Teswe');
+  await RegisterPage.confirmPassword('Teswhe');
 });
 
 When('I leave the username field empty', async () => {
@@ -46,8 +44,6 @@ When('I confirm the password with a different value', async () => {
 When('I click on the Register button', async () => {
   await RegisterPage.clickRegister();
 });
-
-/* ---------- Then ---------- */
 
 Then('I should be redirected to the login page', async () => {
   await expect(browser).toHaveUrl(expect.stringContaining('/login'));

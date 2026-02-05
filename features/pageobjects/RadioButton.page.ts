@@ -2,24 +2,22 @@ import { $ } from '@wdio/globals';
 import Page from './page.js';
 
 class RadioButtonPage extends Page {
-  /* ---------- Page URL ---------- */
    public open () {
         return super.open('radio-buttons');
     }
     
-  /* ---------- Color Radio Buttons ---------- */
+  // Color Radio Buttons 
   get blue() { return $('#blue'); }
   get red() { return $('#red'); }
   get yellow() { return $('#yellow'); }
   get black() { return $('#black'); }
   get green() { return $('#green'); }
 
-  /* ---------- Sports Radio Buttons ---------- */
+   //Sports Radio Buttons 
   get basketball() { return $('#basketball'); }
   get football() { return $('#football'); }
   get tennis() { return $('#tennis'); }
 
-  /* ---------- Generic selector ---------- */
   getRadioButton(option: string) {
     const radios: Record<string, ChainablePromiseElement> = {
       Blue: this.blue,
@@ -37,25 +35,13 @@ class RadioButtonPage extends Page {
 
   getAllRadioButtons() { return [ this.blue, this.red, this.yellow, this.black, this.green, this.basketball, this.football, this.tennis, ]; }
 
-// Color radio group
-getColorRadios() {
-  return [
-    this.blue,
-    this.red,
-    this.yellow,
-    this.black,
-    this.green,
-  ];
-}
+  getColorRadios() {
+     return [this.blue,this.red,this.yellow,this.black,this.green,];
+  }
 
-// Sports radio group
-getSportRadios() {
-  return [
-    this.basketball,
-    this.football,
-    this.tennis,
-  ];
-}
+  getSportRadios() {
+      return [this.basketball,this.football,this.tennis, ];
+  }
 
 }
 

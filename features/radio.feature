@@ -2,8 +2,7 @@ Feature: Radio Button Functionality for 5 Options
 
   Background:
   Given I navigate to the radio button page
-  Then the radio button page should be displayed successfully
-
+  
   Scenario:verify all radio buttons are visible
       Then all radio buttons should be visible
 

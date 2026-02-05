@@ -2,7 +2,6 @@ import { $ } from '@wdio/globals';
 
 
 class RegisterPage {
-  /* ---------- Selectors ---------- */
 
   get usernameInput() {
     return $('#username');
@@ -19,8 +18,6 @@ class RegisterPage {
   get registerButton() {
     return $('button[type="submit"]');
   }
-
-  /* ---------- Actions ---------- */
 
   async open() {
     await browser.url('https://practice.expandtesting.com/register');
