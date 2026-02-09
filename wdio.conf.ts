@@ -1,3 +1,5 @@
+import { features } from "node:process";
+
 export const config: WebdriverIO.Config = {
     //
     // ====================
@@ -24,7 +26,7 @@ export const config: WebdriverIO.Config = {
     //
     specs: [
       './features/**/*.feature'
-       // './features/forgetpassword.feature'
+       
     ],
     // Patterns to exclude.
     exclude: [
@@ -132,7 +134,7 @@ reporters: ['spec'],
 cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
    require: ['./features/step-definitions/login.steps.ts', './features/step-definitions/register.steps.ts' ,'./features/step-definitions/radio.steps.ts'
-    , './features/step-definitions/forgetpassword.steps.ts'
+    , './features/step-definitions/forgetpassword.steps.ts', './features/step-definitions/checkbox.steps.ts', './features/step-definitions/drag-and-drop.steps.ts', './features/step-definitions/otp.steps.ts',
    ],
     
         // <boolean> show full backtrace for errors

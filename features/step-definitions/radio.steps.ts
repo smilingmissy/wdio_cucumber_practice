@@ -2,8 +2,10 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from 'expect-webdriverio';
 import RadioButtonPage from '../pageobjects/RadioButton.page';
 
+
 Given('I navigate to the radio button page', async () => {
-  await RadioButtonPage.open();
+  await browser.url('https://practice.expandtesting.com/radio-buttons');
+
 });
 
 Then('all radio buttons should be visible', async () => {
